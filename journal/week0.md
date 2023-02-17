@@ -6,11 +6,11 @@
 
 Step 1. Download the AWS installation package
 ```
- $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
  ```
  Step 2. Unzip the installation package
 ```
- $ unzip awscliv2.zip
+  unzip awscliv2.zip
 ```
  Step 3. Run the install program
 ```
