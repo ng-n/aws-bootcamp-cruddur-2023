@@ -4,7 +4,7 @@
 
 ### Install AWS CLI
 
-![INSTALLING AWS CLI] (assets/install_cli_proof.jpg)
+!.[INSTALLING AWS CLI]. (assets/install_cli_proof.jpg)
 
 ```
  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
