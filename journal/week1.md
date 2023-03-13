@@ -14,7 +14,7 @@
     ```
         CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=4567"]
     ```
- By default, the command will run the Python3 interpreter and execute flask inside the container's filesystem. <br />
+ <br /> By default, the command will run the Python3 interpreter and execute flask inside the container's filesystem. <br />
 
  To run the 'CMD' as an external script, it is required to create a Bash/Py file and specify the script's path to the filename instead of the abovementioned command. <br />
 
