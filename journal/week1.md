@@ -36,3 +36,38 @@
         ``` 
             docker run -p 4567:4567 backend-flask:1.0
         ```
+## Task 3: Use multi-stage building for a Docker build
+
+    Multi-stage build to remove build dependencies for backend-flask application
+
+    Before: <br />
+    ``` 
+        FROM python:3.10-slim-buster
+        WORKDIR /backend-flask
+        COPY requirements.txt requirements.txt
+        RUN pip3 install -r requirements.txt
+        COPY . .
+        ENV FLASK_ENV=development
+        CMD ["./script.sh"]
+    ```
+    <br/>
+    After: <br />
+    ``` 
+        # Multi-Stage Builds
+        # Stage 1: Build
+        FROM python:3.10-slim-buster AS build
+        WORKDIR /backend-flask
+        COPY requirements.txt requirements.txt
+        RUN pip3 install -r requirements.txt
+        #COPY ..
+
+        # Stage 2: Run
+        FROM python:3.10-slim-buster AS run
+        WORKDIR /backend-flask
+        COPY --from=build /backend-flask /backend-flask
+        ENV FLASK_ENV=development
+        EXPOSE ${PORT}
+        CMD ["bash", "./script.sh"]
+    ```
+    Build and Run the Dockerfile following the abovementioned commands.
+    
