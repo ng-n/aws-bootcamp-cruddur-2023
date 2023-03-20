@@ -4,5 +4,6 @@ ENV PORT=3000
 
 COPY . /frontend-react-js
 WORKDIR /frontend-react-js
+
 EXPOSE ${PORT}
 CMD ["./fe_script.sh"]
