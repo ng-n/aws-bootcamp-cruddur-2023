@@ -13,10 +13,10 @@
 In a Dockerfile, the 'CMD' instruction is used to specify the command that should be run when a container is started from the image.  
     
         CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=4567"]
-        
- <br /> By default, the command will run the Python3 interpreter and execute flask inside the container's filesystem. <br />
 
- To run the 'CMD' as an external script, it is required to create a Bash/Py file and specify the script's path to the filename instead of the abovementioned command. <br />
+By default, the command will run the Python3 interpreter and execute flask inside the container's filesystem. <br />
+
+To run the 'CMD' as an external script, it is required to create a Bash/Py file and specify the script's path to the filename instead of the abovementioned command. <br />
 
    1. Create a Bash script, named ```'script.sh'``` for the backend-flask
         ```
@@ -38,11 +38,10 @@ In a Dockerfile, the 'CMD' instruction is used to specify the command that shoul
         ```
 ## Task 3: Use multi-stage building for a Docker build
 
-Multi-stage build to remove build dependencies for backend-flask application <br />
+Multi-stage build of ```Dockerfile```to remove build dependencies for backend-flask application <br />
 
    Before:
 
-    ``` 
         FROM python:3.10-slim-buster
         WORKDIR /backend-flask
         COPY requirements.txt requirements.txt
@@ -50,11 +49,9 @@ Multi-stage build to remove build dependencies for backend-flask application <br
         COPY . .
         ENV FLASK_ENV=development
         CMD ["./script.sh"]
-    ```
 
    After:
 
-    ``` 
         # Multi-Stage Builds
         # Stage 1: Build
         FROM python:3.10-slim-buster AS build
@@ -70,7 +67,6 @@ Multi-stage build to remove build dependencies for backend-flask application <br
         ENV FLASK_ENV=development
         EXPOSE ${PORT}
         CMD ["bash", "./script.sh"]
-    ```
     
 Build and Run the Dockerfile following the abovementioned commands.
 
