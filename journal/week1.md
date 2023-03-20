@@ -40,7 +40,7 @@
 
     Multi-stage build to remove build dependencies for backend-flask application <br />
 
-    Before: <br />
+   Before: <br />
     ``` 
         FROM python:3.10-slim-buster
         WORKDIR /backend-flask
@@ -51,7 +51,7 @@
         CMD ["./script.sh"]
     ```
     <br/>
-    After: <br />
+   After: <br />
     ``` 
         # Multi-Stage Builds
         # Stage 1: Build
