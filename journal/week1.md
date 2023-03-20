@@ -38,7 +38,7 @@
         ```
 ## Task 3: Use multi-stage building for a Docker build
 
-    Multi-stage build to remove build dependencies for backend-flask application
+    Multi-stage build to remove build dependencies for backend-flask application <br />
 
     Before: <br />
     ``` 
@@ -70,4 +70,4 @@
         CMD ["bash", "./script.sh"]
     ```
     Build and Run the Dockerfile following the abovementioned commands.
-    
+
