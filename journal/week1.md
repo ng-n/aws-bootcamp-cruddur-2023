@@ -10,19 +10,11 @@
 
 ## Task 1: Running Dockerfile CMD as an external script
 
-<<<<<<< HEAD
-In a Dockerfile, the 'CMD' instruction is used to specify the command that should be run when a container is started from the image. 
-    ```
-        CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=4567"]
-    ```
-By default, the command will run the Python3 interpreter and execute flask inside the container's filesystem.
-=======
- In a Dockerfile, the 'CMD' instruction is used to specify the command that should be run when a container is started from the image. <br />
+    In a Dockerfile, the 'CMD' instruction is used to specify the command that should be run when a container is started from the image. 
     ```
         CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=4567"]
     ```
  <br /> By default, the command will run the Python3 interpreter and execute flask inside the container's filesystem. <br />
->>>>>>> 770515559973a85f57246c56d29be57e61836662
 
  To run the 'CMD' as an external script, it is required to create a Bash/Py file and specify the script's path to the filename instead of the abovementioned command. <br />
 
