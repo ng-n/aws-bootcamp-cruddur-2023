@@ -10,9 +10,8 @@
 
 ## Task 1: Running Dockerfile CMD as an external script
 
-    In a Dockerfile, the 'CMD' instruction is used to specify the command that should be run when a container is started from the image.  
+In a Dockerfile, the 'CMD' instruction is used to specify the command that should be run when a container is started from the image.  
     
-<br /> 
     ```
         CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=4567"]
     ```
@@ -40,7 +39,7 @@
         ```
 ## Task 3: Use multi-stage building for a Docker build
 
-    Multi-stage build to remove build dependencies for backend-flask application <br />
+Multi-stage build to remove build dependencies for backend-flask application <br />
 
    Before:
 
@@ -74,5 +73,5 @@
         CMD ["bash", "./script.sh"]
     ```
     
-    Build and Run the Dockerfile following the abovementioned commands.
+Build and Run the Dockerfile following the abovementioned commands.
 
