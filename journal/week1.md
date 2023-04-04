@@ -5,8 +5,9 @@
 2. Push and tag a image to DockerHub [DONE]
 3. Use multi-stage building for a Docker build [DONE]
 4. Implement a healthcheck in the V3 Docker compose file
-5. Install Docker on the local machine and get the same containers running outside Gitpod / Codespaces [DONE]
-6. Launch an EC2 instance that has Docker installed, and pull a container to run your own Docker processes 
+5. Research best practices for Dockerfiles and implement it in your Dockerfile [DONE]
+6. Install Docker on the local machine and get the same containers running outside Gitpod / Codespaces [DONE]
+7. Launch an EC2 instance that has Docker installed, and pull a container to run your own Docker processes 
 
 [NOTE] The Docker is already installed on the local machine before performing the following 1-6 tasks. The installation instruction can be easily found on the Internet.
 
@@ -88,5 +89,11 @@ Multi-stage build of ```Dockerfile```to remove build dependencies for backend-fl
     
 Build and Run the Dockerfile following the abovementioned commands.
 
+## Task 5: Best Practices for Dockerfiles (which have been applied to Dockerfiles for both frontend and backend apps)
 
+1. Use Official Docker Images as Base Image; Do not install packages by yourself to make Dickefrile cleaner. 
+2. Use specific Image Versioning eg. instead of ```FROM node``` use ```FROM node:16.18``` and pick small-sized official images based on smaller OS distro.
+3. Use specific Tags for images instead of the default "latest" tag. It helps you identify and distinguish between different versions of the same Docker image.
+4. Use ```Multi-Stage builds``` to reduce the size of the final Docker image by using dependencies needed to build the image, not to run the app.
+5. Use external scripts if possible to improve modularity and reusability of the build steps.
 
