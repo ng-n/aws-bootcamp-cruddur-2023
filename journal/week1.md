@@ -48,7 +48,7 @@ After building Docker images for both frontend and backend apps, tag and push Do
     docker tag frontend-react-js:1.1 username/frontend-react-js:1.0
     docker push username/frontend-react-js:1.0
    
-The 'docker tag' command is used to assign a new tag to an existing Docker image. So, the above command was used to tag an existing image called 'backend-flask:2.0' with a new tag 'username/backend-flask:1.0'. Then the Docker image was pushed to the Docker Hub repository by the docker push command. 
+The ```'docker tag'``` command is used to assign a new tag to an existing Docker image. So, the above command was used to tag an existing image called ```'backend-flask:2.0'``` with a new tag ```'username/backend-flask:1.0'```. Then the Docker image was pushed to the Docker Hub repository by the docker push command. 
 
 The result in the Docker Hub repository is below
 ![DockerHub](assets/dockerhub.png)
