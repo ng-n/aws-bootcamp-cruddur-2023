@@ -36,6 +36,24 @@ To run the 'CMD' as an external script, it is required to create a Bash/Py file 
         ``` 
             docker run -p 4567:4567 backend-flask:1.0
         ```
+## Task 2: Push and tag an image to Docker Hub
+
+After building Docker images for both frontend and backend apps, tag and push Docker Images by the following commands:
+
+    ``` 
+    docker tag backend-flask:2.0 username/backend-flask:1.0
+    docker push username/backend-flask:1.0
+    
+    docker tag frontend-react-js:1.1 username/frontend-react-js:1.0
+    docker push username/frontend-react-js:1.0
+    ```
+The 'docker tag' command is used to assign a new tag to an existing Docker image. So, the above command was used to tag an existing image called 'backend-flask:2.0' with a new tag 'username/backend-flask:1.0'. Then the Docker image was pushed to the Docker Hub repository by the docker push command. 
+
+The result in the Docker Hub repository is below
+![DockerHub](assets/dockerhub.png)
+
+
+
 ## Task 3: Use multi-stage building for a Docker build
 
 Multi-stage build of ```Dockerfile```to remove build dependencies for backend-flask application <br />
