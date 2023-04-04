@@ -8,7 +8,7 @@
 5. Install Docker on the local machine and get the same containers running outside Gitpod / Codespaces [DONE]
 6. Launch an EC2 instance that has Docker installed, and pull a container to run your own Docker processes 
 
-[NOTE] The Docker is installed on the local machine before performing the following 1-6 tasks. The installation instruction can be easily found on the Internet.
+[NOTE] The Docker is already installed on the local machine before performing the following 1-6 tasks. The installation instruction can be easily found on the Internet.
 
 ## Task 1: Running Dockerfile CMD as an external script
 
