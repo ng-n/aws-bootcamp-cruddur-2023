@@ -97,3 +97,19 @@ Build and Run the Dockerfile following the abovementioned commands.
 4. Use ```Multi-Stage builds``` to reduce the size of the final Docker image by using dependencies needed to build the image, not to run the app.
 5. Use external scripts if possible to improve modularity and reusability of the build steps.
 
+## Task 6: Launch an EC2 instance that has Docker installed
+
+   1. Install Docker on EC2 using User Data (automate it a bit)
+    
+        #!/bin/sh
+        sudo yum update -y
+        sudo amazon-linux-extras install docker
+        sudo service docker start
+        sudo usermod -a -G docker ec2-user
+    
+   2. Pull a Docker Image from your Docker Hub account
+  
+    
+   
+
+__
